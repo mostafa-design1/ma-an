@@ -1019,9 +1019,16 @@ label {
   .btn { width: 100%; }
   .heading { margin-bottom: 35px; }
   .heading > p { font-size: 16px; }
-  .cards { grid-template-columns: 1fr; gap: 28px; }
-  .card img { aspect-ratio: 16 / 11; }
-  .card-title { font-size: 25px; }
+ .cards { grid-template-columns: 1fr; gap: 28px; }
+.card { max-width: 340px; margin-inline: auto; }
+.card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+.card-title { font-size: 25px; }
   .vision-mission { flex-direction: column; padding: 45px 15px; }
   .info-card { width: min(92vw, 420px); }
   .circle-content { width: 68%; }

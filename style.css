@@ -1042,6 +1042,27 @@ label {
     flex-basis: 76px;
     border-width: 4px;
   }
+   /* إصلاح تقطيع الكروت على الموبايل */
+.card {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 600px) {
+  .card:hover img {
+    transform: none;
+  }
+  .card::before {
+    display: none;
+  }
+  .card:hover .card-title {
+    position: static;
+    transform: none;
+    margin-top: 14px;
+    color: var(--text);
+    text-shadow: none;
+  }
+}
   .why-section .icon svg { width: 46px; height: 46px; }
   .why-section .content { min-height: 66px; padding: 11px 20px 12px 15px; }
   .why-section .content::after { bottom: 13px; height: 6px; }

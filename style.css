@@ -1682,6 +1682,22 @@ label {
   .prog-img img { min-height: 200px; }
   .prog-text h2 { font-size: 27px; }
   .prog-cta { width: 100%; }
+   
+/* FIX كروت البرامج */
+.cards .card img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  transform: none !important;
+}
+.cards .card:hover img {
+  transform: none !important;
+}
+.cards .card {
+  overflow: visible !important;
+}
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2064,24 +2080,3 @@ a.contact-info-item:hover {
 
 }
 
-/* إصلاح تقطيع الكروت على الموبايل */
-.card {
-  overflow: hidden;
-  border-radius: var(--radius);
-}
-
-@media (max-width: 600px) {
-  .card:hover img {
-    transform: none;
-  }
-  .card::before {
-    display: none;
-  }
-  .card:hover .card-title {
-    position: static;
-    transform: none;
-    margin-top: 14px;
-    color: var(--text);
-    text-shadow: none;
-  }
-}

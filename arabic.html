@@ -1,429 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Arabic Program</title>
-
-    <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #fffaf9;
-    color: #745861;
-}
-
-.arabic-page {
-    width: min(1000px, 92%);
-    margin: 40px auto;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 380px;
-
-    display: grid;
-    grid-template-columns: 1fr 0.8fr;
-    align-items: center;
-    gap: 60px;
-
-    padding: 55px;
-
-    background: #fff;
-    border-radius: 28px;
-}
-
-.eyebrow {
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: #c48796;
-}
-
-.hero h1 {
-    margin: 12px 0;
-
-    font-size: 48px;
-    color: #a66b7b;
-}
-
-.hero p {
-    max-width: 430px;
-
-    font-size: 14px;
-    line-height: 1.8;
-
-    color: #999;
-}
-
-.btn {
-    display: inline-block;
-
-    margin-top: 22px;
-    padding: 12px 25px;
-
-    background: #bd8290;
-    color: white;
-
-    border-radius: 30px;
-
-    text-decoration: none;
-    font-size: 13px;
-}
-
-
-/* =========================
-   VISUAL
-========================= */
-
-.hero-visual {
-    height: 280px;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #dceef0;
-
-    border-radius: 50% 50% 25px 25px;
-}
-
-.arabic-letter {
-    width: 130px;
-    height: 130px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: white;
-
-    border-radius: 50%;
-
-    font-size: 75px;
-    font-weight: bold;
-
-    color: #bd8290;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-}
-
-.floating {
-    position: absolute;
-
-    padding: 8px 15px;
-
-    background: white;
-
-    border-radius: 20px;
-
-    color: #a66b7b;
-
-    font-size: 14px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,.08);
-}
-
-.word-one {
-    top: 35px;
-    right: 20px;
-}
-
-.word-two {
-    bottom: 30px;
-    left: 20px;
-}
-
-
-/* =========================
-   LEARNING
-========================= */
-
-.learning {
-    padding: 65px 5px 35px;
-}
-
-.section-heading {
-    text-align: center;
-}
-
-.section-heading h2 {
-    margin-top: 8px;
-
-    font-size: 28px;
-
-    color: #a66b7b;
-}
-
-.section-heading p {
-    margin-top: 8px;
-
-    color: #999;
-    font-size: 13px;
-}
-
-
-/* =========================
-   CARDS
-========================= */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-
-    margin-top: 30px;
-}
-
-.card {
-    padding: 28px 20px;
-
-    text-align: center;
-
-    background: white;
-
-    border: 1px solid #f0e1e4;
-
-    border-radius: 20px;
-
-    transition: .3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.icon {
-    width: 60px;
-    height: 60px;
-
-    margin: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #f5dce1;
-
-    color: #ae7180;
-
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.card h3 {
-    margin-top: 15px;
-
-    color: #a66b7b;
-
-    font-size: 17px;
-}
-
-.card p {
-    margin-top: 8px;
-
-    color: #999;
-
-    font-size: 12px;
-    line-height: 1.7;
-}
-
-
-/* =========================
-   BOTTOM
-========================= */
-
-.bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 25px 30px;
-
-    background: #f4e1e4;
-
-    border-radius: 20px;
-}
-
-.bottom h2 {
-    margin-top: 6px;
-
-    color: #a66b7b;
-
-    font-size: 20px;
-}
-
-.arrow {
-    width: 45px;
-    height: 45px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: white;
-
-    border-radius: 50%;
-
-    color: #a66b7b;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 700px) {
-
-    .hero {
-        grid-template-columns: 1fr;
-
-        padding: 35px;
-
-        text-align: center;
-    }
-
-    .hero p {
-        margin: auto;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-visual {
-        height: 240px;
-    }
-}
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arabic Language | Ma'an Academy</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    .arabic-hero{text-align:center; padding:40px 0 10px;}
+    .arabic-hero h1{font-size:48px;}
+    .arabic-hero h1 span{color:#2b8fa5;}
+    .arabic-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px; padding:30px 20px 80px; max-width:1100px; margin:0 auto;}
+    .arabic-card{background:#fff; border:1px solid #E6E8EC; border-radius:20px; overflow:hidden;}
+    .arabic-card-head{background:#f4f8f9; padding:24px; border-bottom:1px solid #eee;}
+    .arabic-card-body{padding:24px;}
+    .arabic-list{list-style:none; padding:0; margin:16px 0;}
+    .arabic-list li{margin:8px 0; padding-left:20px; position:relative;}
+    .arabic-list li::before{content:"✓"; position:absolute; left:0; color:#2b8fa5; font-weight:800;}
+    .meta{display:flex; gap:8px; flex-wrap:wrap; margin:12px 0;}
+    .meta span{background:#eef6f7; padding:5px 10px; border-radius:20px; font-size:11px; font-weight:700;}
+    .enroll{display:block; text-align:center; background:#0f2e33; color:#fff; padding:14px; border-radius:12px; text-decoration:none; font-weight:700; margin-top:20px;}
+    @media(max-width:900px){.arabic-grid{grid-template-columns:1fr;}}
+  </style>
 </head>
-
 <body>
 
-<section class="arabic-page">
-
-    <!-- HERO -->
-    <div class="hero">
-
-        <div class="hero-content">
-
-            <span class="eyebrow">LEARNING PROGRAM</span>
-
-            <h1>Arabic Language</h1>
-
-            <p>
-                A joyful learning journey that helps children
-                discover the beauty of the Arabic language.
-            </p>
-
-            <a href="#" class="btn">
-                Explore Program
-            </a>
-
-        </div>
-
-
-        <div class="hero-visual">
-
-            <div class="arabic-letter">ض</div>
-
-            <div class="floating word-one">لغة</div>
-            <div class="floating word-two">تعلم</div>
-
-        </div>
-
+  <!-- نفس الهيدر بتاعك بالظبط عشان ميبوظش -->
+  <header class="site-header" id="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Ma'an Academy Learning Center home">
+        <span class="brand-mark"><img src="maanLogo.png" alt="Ma'an Academy Learning Center logo" width="100" height="100"></span>
+      </a>
+      <input class="menu-toggle" type="checkbox" id="menuToggle" tabindex="-1">
+      <button class="menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+      <nav id="mainNav" class="nav" aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html" class="nav-cta">Support Us</a>
+      </nav>
     </div>
+  </header>
 
-
-    <!-- LEARNING -->
-    <section class="learning">
-
-        <div class="section-heading">
-            <span class="eyebrow">WHAT WE EXPLORE</span>
-
-            <h2>Learning Arabic Through Discovery</h2>
-
-            <p>
-                This section will introduce the main areas
-                of the Arabic language program.
-            </p>
-        </div>
-
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="icon">أ</div>
-
-                <h3>Arabic Letters</h3>
-
-                <p>
-                    Discover letters, sounds and basic
-                    language concepts.
-                </p>
-            </div>
-
-
-            <div class="card">
-                <div class="icon">✎</div>
-
-                <h3>Reading & Writing</h3>
-
-                <p>
-                    Build early reading and writing skills
-                    through engaging activities.
-                </p>
-            </div>
-
-
-            <div class="card">
-                <div class="icon">💬</div>
-
-                <h3>Communication</h3>
-
-                <p>
-                    Develop vocabulary and confidence
-                    in expressing ideas.
-                </p>
-            </div>
-
-        </div>
-
+  <main>
+    <section class="arabic-hero container">
+      <span class="eyebrow dark">ARABIC LANGUAGE PROGRAM</span>
+      <h1>Arabic <span>Language</span></h1>
+      <p>Choose the track that fits your family - After School for daily immersion, or Weekend for flexible learning.</p>
     </section>
 
-
-    <!-- BOTTOM -->
-    <div class="bottom">
-
-        <div>
-            <span class="eyebrow">ARABIC PROGRAM</span>
-
-            <h2>Learning Arabic with Joy & Confidence</h2>
+    <section class="arabic-grid">
+      <div class="arabic-card">
+        <div class="arabic-card-head">
+          <span class="eyebrow" style="font-size:11px; color:#2b8fa5; font-weight:700;">MONDAY - THURSDAY • 4PM - 6PM</span>
+          <h2>After School</h2>
+          <p style="margin:0; opacity:.7; font-size:14px;">Daily Arabic immersion after regular school hours.</p>
         </div>
+        <div class="arabic-card-body">
+          <div class="meta"><span>Age 5-14</span><span>Fusha + Conversation</span><span>Small Groups</span></div>
+          <ul class="arabic-list">
+            <li>Reading & Writing - from letters to sentences</li>
+            <li>Quranic Arabic vocabulary</li>
+            <li>Speaking practice with native teachers</li>
+            <li>Homework help & Islamic Adab</li>
+          </ul>
+          <a href="contact.html" class="enroll">Enroll in After School</a>
+        </div>
+      </div>
 
-        <div class="arrow">→</div>
+      <div class="arabic-card">
+        <div class="arabic-card-head">
+          <span class="eyebrow" style="font-size:11px; color:#2b8fa5; font-weight:700;">SATURDAY - SUNDAY • 9AM - 1PM</span>
+          <h2>Weekend School</h2>
+          <p style="margin:0; opacity:.7; font-size:14px;">Intensive weekend program for busy families.</p>
+        </div>
+        <div class="arabic-card-body">
+          <div class="meta"><span>Age 5-16</span><span>Beginner to Advanced</span><span>2 Days / Week</span></div>
+          <ul class="arabic-list">
+            <li>Intensive reading & Tajweed basics</li>
+            <li>Fun activities, stories & games in Arabic</li>
+            <li>Writing & dictation mastery</li>
+            <li>Monthly assessment & certificate</li>
+          </ul>
+          <a href="contact.html" class="enroll">Enroll in Weekend</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="maanLogo.png" alt="Ma'an Academy" class="maanLogo" width="220" height="220" loading="lazy"></div>
+      <div><h3>Explore</h3><a href="about.html">About</a><a href="programs.html">Academics</a></div>
+      <div><h3>Connect</h3><a href="contact.html">Contact</a><a href="donate.html">Support Us</a></div>
     </div>
+    <div class="container footer-bottom"><span>© 2026 Ma'an Academy Learning Center. All rights reserved.</span></div>
+  </footer>
 
-</section>
-
+  <script src="script.js" defer></script>
 </body>
 </html>

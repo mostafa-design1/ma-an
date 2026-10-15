@@ -1239,7 +1239,7 @@ label {
   margin: 0;
 
   font-size: clamp(2.4rem, 5vw, 4.5rem);
-
+ color: var(--secondary) ;
   letter-spacing: -0.055em;
 }
 
@@ -1399,7 +1399,7 @@ label {
 
   margin-bottom: 22px;
 
-  color: var(--dark);
+  color: black;
 
   background: var(--primary);
 
@@ -1435,7 +1435,7 @@ label {
 
   color: var(--dark);
 
-  background: rgba(91, 197, 233, 0.08);
+  background: var (--secondary);
 
   border-left: 4px solid var(--primary);
 

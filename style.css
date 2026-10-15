@@ -452,7 +452,7 @@ label {
 
 .btn.primary {
   background: var(--primary);
-  color: var(--dark);
+  color: black;
 }
 
 .btn.primary:hover {
@@ -469,7 +469,7 @@ label {
 
 .btn.ghost:hover {
   background: var(--white);
-  color: var(--dark);
+  color: black;
 }
 
 /* Shared sections */

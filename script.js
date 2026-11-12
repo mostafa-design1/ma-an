@@ -412,6 +412,55 @@
       );
     }
 
+    /* =========================================================
+   MA'AN ACADEMY — HERO TESTIMONIAL ROTATOR
+   Add this script before </body>, or include it in script.js.
+========================================================= */
+(() => {
+  "use strict";
+
+  const text = document.getElementById("maHeroReviewText");
+  const author = document.getElementById("maHeroReviewAuthor");
+
+  if (!text || !author) return;
+
+  const reviews = [
+    {
+      text: "The foundation they received at Ma’an Academy made their transition to school smooth and successful, Alhamdulillah.",
+      author: "R. E."
+    },
+    {
+      text: "My son enjoys going and looks forward to it, even on days where there’s no school.",
+      author: "M. M."
+    },
+    {
+      text: "His arabic vocabulary increased dramatically and quickly.",
+      author: "Parent review"
+    },
+    {
+      text: "Excellent teachers, kids enjoy learning and are excited to attend every lesson.",
+      author: "Parent review"
+    }
+  ];
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  let current = 0;
+
+  window.setInterval(() => {
+    current = (current + 1) % reviews.length;
+
+    text.style.opacity = "0";
+
+    window.setTimeout(() => {
+      text.textContent = reviews[current].text;
+      author.textContent = reviews[current].author;
+      text.style.opacity = "1";
+    }, 250);
+  }, 6500);
+})();
+
+
     /* =======================================================
        JS READY
        ======================================================= */

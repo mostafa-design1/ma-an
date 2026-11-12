@@ -354,6 +354,62 @@ label {
   animation: heroFadeUp .9s .3s var(--ease) both;
 }
 
+
+.ma-hero-review {
+  position: relative;
+  width: min(620px, 100%);
+  margin: 26px auto 0;
+  padding: 16px 22px 15px;
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: 16px;
+  background: rgba(16, 38, 40, .34);
+  color: #fff;
+  text-align: center;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  animation: heroFadeUp .9s .5s both;
+}
+
+.ma-hero-review__quote {
+  display: block;
+  height: 20px;
+  color: var(--primary);
+  font-family: Georgia, serif;
+  font-size: 38px;
+  line-height: 1;
+}
+
+.ma-hero-review__text {
+  margin: 5px 0 10px;
+  color: rgba(255, 255, 255, .94);
+  font-size: 14px;
+  line-height: 1.7;
+  transition: opacity .25s ease;
+}
+
+.ma-hero-review__meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: rgba(255, 255, 255, .72);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.ma-hero-review__meta span:first-child {
+  color: #fff;
+}
+
+.ma-hero-review__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
 .hero-proof {
   display: flex;
   flex-wrap: wrap;
